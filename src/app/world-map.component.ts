@@ -7,20 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./world-map.component.css']
 })
 export class WorldMapComponent {
+  showPopup: boolean = false;
+  popupContent: string = "Popup Content"; // You can replace this with your desired popup content
+  popupStyles: any = {}; // Variable to set the popup styles
+
   onRegionHover(region: string) {
-    // Handle the hover event here
-    const regionElement = document.getElementById(region);
-    if (regionElement) {
-      regionElement.setAttribute('style', 'fill: lightgrey;');
+    if (region === 'north-america') {
+      this.showPopup = true;
+      this.popupStyles = {
+        color: '#000', // Change the text color to black for better visibility
+        'font-weight': 'bold' // Make the text bold for emphasis
+      };
     }
   }
 
   onRegionLeave(region: string) {
-    // Handle the leave event here
-    const regionElement = document.getElementById(region);
-    if (regionElement) {
-      regionElement.removeAttribute('style');
+    if (region === 'north-america') {
+      this.showPopup = false;
     }
   }
 }
-
