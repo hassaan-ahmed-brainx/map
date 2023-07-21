@@ -1,0 +1,43 @@
+<!-- world-map.component.html -->
+<div class="world-map-container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+    <image xlink:href="/assets/Group280.svg" width="1000" height="600"></image>
+    <!-- Add invisible polygons for each region -->
+    <polygon
+      id="north-america"
+      points="x1,y1 x2,y2 x3,y3"
+      (mouseenter)="onRegionHover('north-america')"
+      (mouseleave)="onRegionLeave('north-america')"
+    />
+    <polygon
+      id="south-america"
+      points="x1,y1 x2,y2 x3,y3"
+      (mouseenter)="onRegionHover('south-america')"
+      (mouseleave)="onRegionLeave('south-america')"
+    />
+    <polygon
+      id="africa"
+      points="x1,y1 x2,y2 x3,y3"
+      (mouseenter)="onRegionHover('africa')"
+      (mouseleave)="onRegionLeave('africa')"
+    />
+    <polygon
+      id="europe"
+      points="x1,y1 x2,y2 x3,y3"
+      (mouseenter)="onRegionHover('europe')"
+      (mouseleave)="onRegionLeave('europe')"
+    />
+    <polygon
+      id="asia"
+      points="x1,y1 x2,y2 x3,y3"
+      (mouseenter)="onRegionHover('asia')"
+      (mouseleave)="onRegionLeave('asia')"
+    />
+    <polygon
+      id="australia"
+      points="x1,y1 x2,y2 x3,y3"
+      (mouseenter)="onRegionHover('australia')"
+      (mouseleave)="onRegionLeave('australia')"
+    />
+  </svg>
+</div>

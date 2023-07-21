@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Apply hover effect for the sections */
+#north-america:hover { fill: #B1D1FF; }
+#south-america:hover { fill: #75ACFC; }
+#africa:hover { fill: #C4D4EF; }
+#europe:hover { fill: #0B5ED7; }
+#asia:hover { fill: #75ACFC; }
+#australia:hover { fill: #0B5ED7; }
+

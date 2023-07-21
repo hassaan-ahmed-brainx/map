@@ -1,29 +1,26 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
 
-describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+@Component({
+  selector: 'app-world-map',
+  templateUrl: './world-map.component.html',
+  styleUrls: ['./world-map.component.css']
+})
+export class WorldMapComponent {
+  onMapClick(event: MouseEvent) {
+    // Handle the click event here
+    const target = event.target as HTMLElement;
+    const regionId = target.id;
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    if (regionId === 'asia') {
+      // Code to color other regions when Asia is clicked
+      document.getElementById('north-america').style.fill = 'lightgrey';
+      document.getElementById('south-america').style.fill = 'lightgrey';
+      document.getElementById('africa').style.fill = 'lightgrey';
+      document.getElementById('europe').style.fill = 'lightgrey';
+      document.getElementById('australia').style.fill = 'lightgrey';
+    }
 
-  it(`should have as title 'angular-world-map'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-world-map');
-  });
+    // Add similar handling for other regions if required
+  }
+}
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-world-map app is running!');
-  });
-});

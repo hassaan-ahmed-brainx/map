@@ -1,18 +1,19 @@
+// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WorldMapComponent } from './world-map.component'; // Update the import path
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WorldMapComponent, // Add WorldMapComponent to the declarations array
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

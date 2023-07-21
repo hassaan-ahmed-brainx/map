@@ -1,0 +1,19 @@
+/* Apply hover effect for the sections */
+#north-america:hover { fill: #B1D1FF; }
+#south-america:hover { fill: #75ACFC; }
+#africa:hover { fill: #C4D4EF; }
+#europe:hover { fill: #0B5ED7; }
+#asia:hover { fill: #75ACFC; }
+#australia:hover { fill: #0B5ED7; }
+
+
+/* world-map.component.css */
+.world-map-container {
+  width: 1000px; /* Set the width to match the viewBox width */
+  height: 600px; /* Set the height to match the viewBox height */
+}
+/* world-map.component.css */
+.world-map-container svg polygon {
+  pointer-events: all;
+}
+
